@@ -1,0 +1,42 @@
+### GET tous les véhicules
+GET http://localhost:3000/vehicules
+
+
+### GET véhicule par ID
+GET http://localhost:3000/vehicules/214c4bd3-33cb-4fbf-a720-8b44f4070d70
+
+
+### POST créer un véhicule
+POST http://localhost:3000/vehicules
+Content-Type: application/json
+
+{
+    "marque": "Toyota",
+    "model": "Hybride",
+    "annee": 2024,
+    "prixLocation": 200000,
+    "immatriculation": "ABC-15"
+}
+
+
+### PUT modifier un véhicule
+PUT http://localhost:3000/vehicules/214c4bd3-33cb-4fbf-a720-8b44f4070d70
+Content-Type: application/json
+
+{   
+    "marque" : "Mercedes BENZ",
+    "annee": 2020,
+    "prixLocation": 100000
+}
+
+
+### DELETE supprimer un véhicule
+DELETE http://localhost:3000/vehicules/1
+
+
+### GET véhicule par immatriculation
+GET http://localhost:3000/vehicules/search/ABC-15
+
+
+### GZT / Vehicule par prix
+GET http://localhost:3000/vehicules/price/200000
